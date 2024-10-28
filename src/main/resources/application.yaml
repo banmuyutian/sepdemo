@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: sepdemo
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1521:orcl
+    username: dbuser
+    password: dbpass
+    driver-class-name: oracle.jdbc.OracleDriver
+
+server:
+  port: 8081
+
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+  global-config:
+    db-config:
+      id-type: auto
+  mapper-locations: classpath:/mapper/**Mapper.xml
